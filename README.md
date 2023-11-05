@@ -45,4 +45,30 @@ go: found rsc.io/quote in rsc.io/quote v1.5.2
 O comando acima busca os modulos para os pacotes externos que foram importados em seus arquivos ".go".
 </p> 
 
+Para usar seu próprio modulo local quando ele ainda não estiver publicado em um repositório remoto, utilize:
+
+```bash
+$ go mod edit -replace example.com/greetings=../greetings
+```
+
+Após o comando acima, meu arquivo go.mod foi modificado: 
+
+```
+// cut
+replace example.com/greetings => ../greetings
+```
+
+
+Atualize as dependências novamente:
+
+```bash
+$ go mod tidy
+```
+Depois de atualizar, meu arquivo go.mod foi modificado:
+
+```
+// cut
+require example.com/greetings v0.0.0-00010101000000-000000000000
+```
+
 ## [Aprenda GO](https://go.dev/doc/) hoje !!!
