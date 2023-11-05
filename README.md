@@ -38,6 +38,11 @@ Resolver as dependências:
 
 ```bash
 $ go mod tidy
+go: finding module for package rsc.io/quote
+go: found rsc.io/quote in rsc.io/quote v1.5.2
 ```
+<p>
+O comando acima busca os modulos para os pacotes externos que foram importados em seus arquivos ".go".
+</p> 
 
->[Aprenda GO](https://go.dev/doc/) hoje !!!
+## [Aprenda GO](https://go.dev/doc/) hoje !!!
