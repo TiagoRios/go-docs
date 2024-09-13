@@ -37,8 +37,7 @@ func Hellos(names []string) (map[string]string, error) {
 		if err != nil {
 			return nil, err
 		}
-		// In the map, associate the retrieved message with asdfgsdfasdfa
-		// the name.
+		// In the map, associate the retrieved message with the name.
 		messages[name] = message
 	}
 
